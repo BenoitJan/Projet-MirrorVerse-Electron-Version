@@ -1,0 +1,14 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "MirrorVerse",
+  "main": "main.js",
+  "author": "Benoît JAN",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.4"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}
