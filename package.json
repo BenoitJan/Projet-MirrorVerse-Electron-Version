@@ -1,14 +1,16 @@
 {
-  "name": "my-app",
+  "name": "python-app-with-electron-gui",
   "version": "1.0.0",
-  "description": "MirrorVerse",
+  "description": "A minimal Electron application",
   "main": "main.js",
-  "author": "Benoît JAN",
-  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^19.0.4"
   },
-  "scripts": {
-    "start": "electron ."
+  "dependencies": {
+    "python-shell": "^1.0.7"
   }
 }
