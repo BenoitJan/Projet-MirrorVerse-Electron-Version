@@ -1,12 +1,12 @@
-*{
-    padding: 0%;
-    box-sizing: border-box;
-    /* background-color: black; */
-    color: white;
+* {
+  padding: 0%;
+  box-sizing: border-box;
+  /* background-color: black; */
+  color: white;
 }
 
-body{
-    background-color: black !important;
+body {
+  background-color: black !important;
 }
 
 /* #neutralinoapp {
@@ -16,7 +16,7 @@ body{
     cursor: default;
 } */
 
-#neutralinoapp h1{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+#neutralinoapp h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
 }
