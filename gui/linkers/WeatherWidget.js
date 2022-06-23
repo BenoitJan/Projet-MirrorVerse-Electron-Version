@@ -1,8 +1,12 @@
 const showFinal = document.getElementById("weather-body");
+// process.env.GOOLE_API_KEY = "AIzaSyCHHOycYADJY0ZhPjDshAOQW92pjbqVkAw";
+// console.log("AIzaSyCHHOycYADJY0ZhPjDshAOQW92pjbqVkAw");
 
 function initMap() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
+    process.env.GOOLE_API_KEY = "AIzaSyCHHOycYADJY0ZhPjDshAOQW92pjbqVkAw";
+    console.log("AIzaSyCHHOycYADJY0ZhPjDshAOQW92pjbqVkAw");
   } else {
     console.log(
       "Your location isn't available to us and we cannot show weather data"
@@ -90,5 +94,3 @@ function sunset(dat) {
   //console.log(timestr);
   return timestr;
 }
-
-// process.env.GOOGLE_API_KEY = "AIzaSyCHHOycYADJY0ZhPjDshAOQW92pjbqVkAw";
