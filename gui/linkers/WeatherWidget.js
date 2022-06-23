@@ -1,6 +1,6 @@
 const showFinal = document.getElementById("weather-body");
 
-function giveData() {
+function initMap() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
