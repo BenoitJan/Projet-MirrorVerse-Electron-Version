@@ -1,12 +1,11 @@
 const showFinal = document.getElementById("weather-body");
-// process.env.GOOLE_API_KEY = "AIzaSyCHHOycYADJY0ZhPjDshAOQW92pjbqVkAw";
-// console.log("AIzaSyCHHOycYADJY0ZhPjDshAOQW92pjbqVkAw");
+const _process = process;
+_process.env.GOOLE_API_KEY = "AIzaSyCHHOycYADJY0ZhPjDshAOQW92pjbqVkAw";
 
 function initMap() {
   if (navigator.geolocation) {
+    console.log(_process.env.GOOLE_API_KEY);
     navigator.geolocation.getCurrentPosition(showPosition);
-    process.env.GOOLE_API_KEY = "AIzaSyCHHOycYADJY0ZhPjDshAOQW92pjbqVkAw";
-    console.log("AIzaSyCHHOycYADJY0ZhPjDshAOQW92pjbqVkAw");
   } else {
     console.log(
       "Your location isn't available to us and we cannot show weather data"
