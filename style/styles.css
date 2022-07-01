@@ -4,10 +4,13 @@
   /* background-color: black; */
   color: white;
   overflow: hidden;
+  cursor: none;
 }
 
 body {
   background-color: black !important;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 /* #neutralinoapp {
@@ -15,11 +18,29 @@ body {
     -webkit-user-select: none;
     user-select: none;
     cursor: default;
-} */
+  } */
+
+#neutralinoapp .btn-dark {
+  background-color: black;
+  border: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+#neutralinoapp button {
+  z-index: 999;
+}
 
 #neutralinoapp h1 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 32px;
+}
+
+#clock {
+  position: absolute;
+  top: 28px;
+  left: 40px;
+  text-align: left;
 }
 
 #welcome {
@@ -31,11 +52,11 @@ body {
   height: 100%;
   opacity: 0;
   transform: scale(2);
-  animation-name: apparition;
+  animation-name: fadeOut;
   animation-duration: 3000ms;
 }
 
-@keyframes apparition {
+@keyframes fadeOut {
   0% {
     opacity: 1;
     transform: scale(2);
@@ -48,19 +69,15 @@ body {
   }
 }
 
-/* #welcome + h1 {
-  height: 100% !important;
-} */
-
 #clock,
-#weather-body {
+#weather-body,
+button {
   opacity: 1;
   animation-duration: 5000ms;
-  /* animation-delay: 3000ms; */
-  animation-name: apparition2;
+  animation-name: fadeIn;
 }
 
-@keyframes apparition2 {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -74,6 +91,36 @@ body {
   }
 }
 
-#neutralinoapp button {
+.inner-cursor {
+  position: fixed;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: width 0.5s height 0.5s;
   z-index: 9999;
+}
+
+.inner-cursor.grow {
+  width: 25px;
+  height: 25px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.outer-cursor {
+  position: fixed;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  /* transition: 0.1s; */
 }

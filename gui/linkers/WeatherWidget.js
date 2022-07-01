@@ -93,3 +93,44 @@ function sunset(dat) {
   //console.log(timestr);
   return timestr;
 }
+
+//Transition to page | Fade animation
+window.transitionToPage = function (href) {
+  document.querySelector("body").style.opacity = 0;
+  setTimeout(function () {
+    window.location.href = href;
+  }, 500);
+};
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.querySelector("body").style.opacity = 1;
+});
+
+// CURSOR CUSTOMIZATION
+let innerCursor = document.querySelector(".inner-cursor");
+let outerCursor = document.querySelector(".outer-cursor");
+
+document.addEventListener("mousemove", moveCursor);
+
+function moveCursor(e) {
+  let x = e.clientX;
+  let y = e.clientY;
+
+  innerCursor.style.left = `${x}px`;
+  innerCursor.style.top = `${y}px`;
+  outerCursor.style.left = `${x}px`;
+  outerCursor.style.top = `${y}px`;
+}
+
+let links = Array.from(document.querySelectorAll("button"));
+
+console.log(links);
+
+links.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    innerCursor.classList.add("grow");
+  });
+  link.addEventListener("mouseleave", () => {
+    innerCursor.classList.remove("grow");
+  });
+});
