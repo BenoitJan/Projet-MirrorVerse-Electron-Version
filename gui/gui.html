@@ -20,6 +20,7 @@
       <button class="btn btn-info"><a style="color:white" href="WeatherApp.html">Weather</a></button> -->
       <!-- <button class="btn btn-info"><a style="color:white" href="IndianWeather.html">Indian Weather</a></button> -->
 
+
       <div id="clock">
         <h1 id="date-time"></h1>
       </div>
@@ -55,6 +56,15 @@
 
       <div id="ytplayer"></div>
 
+      <!--<div id="embed-iframe"></div>-->
+
+      <!-- Normale (380px) -->
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/6iq7kLF6m5uhr5vE0ow0hC?utm_source=generator" width="40%" height="380"
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+
     </div>
 
     <!-- Your app's source files -->
@@ -77,12 +87,14 @@
       var player;
       function onYouTubePlayerAPIReady() {
         player = new YT.Player('ytplayer', {
-          height: '360',
-          width: '640',
+          height: '180',
+          width: '320',
           videoId: '5AhZh4A7NLM'
         });
       }
     </script>
+    <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+    <script src="linkers/spotify.js"></script>
 
 
   </body>
