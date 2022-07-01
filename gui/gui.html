@@ -24,8 +24,6 @@
         <h1 id="date-time"></h1>
       </div>
 
-      <div id="ytplayer"></div>
-
       <div class="container">
         <div class="weather-body text-center bg-primary" id="weather-body">
           <div class="city-name">
@@ -55,6 +53,8 @@
         </div>
       </div>
 
+      <div id="ytplayer"></div>
+
     </div>
 
     <!-- Your app's source files -->
@@ -65,7 +65,24 @@
     <script src="linkers/clock.js"></script>
     <script src="../main.js"></script>
     <script src="../renderer.js"></script>
-    <script src="../ytb.js"></script>
+    <script>
+      // Load the IFrame Player API code asynchronously
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // Replace the 'ytplayer' element with an <iframe> and
+      // YouTube player after the API code downloads
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('ytplayer', {
+          height: '360',
+          width: '640',
+          videoId: '5AhZh4A7NLM'
+        });
+      }
+    </script>
 
 
   </body>
