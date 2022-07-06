@@ -27,6 +27,14 @@ body {
   bottom: 0;
 }
 
+#neutralinoapp .btn-dark-1 {
+  background-color: black;
+  border: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 #neutralinoapp button {
   z-index: 999;
 }

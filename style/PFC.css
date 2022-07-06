@@ -1,0 +1,115 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  /* transition page animation */
+  opacity: 0;
+  transition: opacity 0.5s;
+  cursor: none;
+}
+
+button.PFC_btn {
+  padding: 0;
+  cursor: pointer;
+  border: 5px solid lightgrey;
+}
+button.PFC_btn:hover {
+  border-color: green;
+}
+button.PFC_btn img {
+  display: block;
+  width: 160px;
+  height: 120px;
+  border: 0;
+}
+button.PFC_btn_replay {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.equal {
+  color: lightblue;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.win {
+  color: lightgreen;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.lose {
+  font-weight: bold;
+  color: red;
+  text-transform: uppercase;
+}
+
+#PFC_result h4 {
+  font-weight: normal;
+  text-align: center;
+}
+#PFC_result img {
+  width: 100px;
+  border: 2px solid lightgrey;
+  display: none;
+}
+#PFC_result img.win {
+  border: 2px solid green;
+  display: none;
+}
+#PFC_result img.lose {
+  border: 2px solid red;
+  display: none;
+}
+
+.inner-cursor {
+  position: fixed;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: width 0.5s height 0.5s;
+  z-index: 9999;
+}
+
+.inner-cursor.grow {
+  width: 25px;
+  height: 25px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.outer-cursor {
+  position: fixed;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Button position */
+.btn-dark {
+  position: absolute;
+  display: flex;
+  background-color: black;
+  color: white;
+  border: 0;
+  bottom: 0;
+}
+
+.btn-dark-1 {
+  background-color: black;
+  color: white;
+  border: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

@@ -8,16 +8,15 @@
 
 <body style="background-color: black;">
   <button class=" btn btn-dark">
-    <span onclick="transitionToPage('gui.html')" style="font-size: 2rem;">Homepage</span>
+    <span onclick="transitionToPage('gui.html')" style="font-size: 3rem;">Homepage</span>
   </button>
+  <button class="btn btn-dark btn-dark-1"><span onclick="transitionToPage('PFC.html')"
+      style="font-size: 3rem;">Shifumi</span></button>
 
   <div class="inner-cursor"></div>
   <div class="outer-cursor"></div>
 
   <div class="container">
-    <!-- <div id="clock">
-      <h1 style="color: white;" id="date-time"></h1>
-    </div> -->
 
     <div id="ytplayer"></div>
 
@@ -50,8 +49,8 @@
 
   function onYouTubePlayerAPIReady() {
     player = new YT.Player('ytplayer', {
-      height: '180',
-      width: '320',
+      height: '360',
+      width: '640',
       videoId: '5AhZh4A7NLM'
     });
   }
