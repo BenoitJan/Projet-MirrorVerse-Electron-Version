@@ -1,9 +1,9 @@
 * {
-  padding: 0%;
   box-sizing: border-box;
+  overflow: hidden;
+  padding: 0%;
   /* background-color: black; */
   color: white;
-  overflow: hidden;
   cursor: none;
 }
 
@@ -21,18 +21,18 @@ body {
   } */
 
 #neutralinoapp .btn-dark {
-  background-color: black;
-  border: 0;
   position: absolute;
   bottom: 0;
+  background-color: black;
+  border: 0;
 }
 
 #neutralinoapp .btn-dark-1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   background-color: black;
   border: 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 #neutralinoapp button {
