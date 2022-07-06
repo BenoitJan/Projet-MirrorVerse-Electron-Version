@@ -20,6 +20,14 @@
     </div> -->
 
     <div id="ytplayer"></div>
+
+    <div class="spt-container">
+      <iframe id="spt-player" style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/6iq7kLF6m5uhr5vE0ow0hC?utm_source=generator" width="40%" height="300"
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+
   </div>
 </body>
 
@@ -42,9 +50,12 @@
 
   function onYouTubePlayerAPIReady() {
     player = new YT.Player('ytplayer', {
-      height: '360',
-      width: '640',
+      height: '180',
+      width: '320',
       videoId: '5AhZh4A7NLM'
     });
   }
 </script>
+
+<script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+<script src="linkers/spotify.js"></script>

@@ -9,8 +9,20 @@ body {
   position: absolute;
   top: 2%;
   left: 1%;
-  width: 66% !important;
-  height: 60%;
+  /* width: 66% !important;
+  height: 60%; */
+}
+
+.spt-container {
+  position: absolute;
+  /* right: -48%; */
+  display: flex;
+  justify-content: flex-end;
+  width: 96vw;
+}
+
+#spt-player {
+  width: 228px;
 }
 
 #clock {
